@@ -1,1 +1,12 @@
-name: 
+name: Exécution des tests
+
+on: [push]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run tests
+        run: |
+          python3 -m pytest
