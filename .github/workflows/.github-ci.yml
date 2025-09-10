@@ -20,3 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+      - name: Réaliser les tests
+        run: |
+          pytest
